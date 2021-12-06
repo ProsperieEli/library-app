@@ -14,16 +14,13 @@ function App() {
         <NavLink to="/" exact>
           Home
         </NavLink>
-        <NavLink to="BookList" exact>
+        <NavLink to="/library" exact>
           List
-        </NavLink>
-        <NavLink to="BookDetail" exact>
-          Detail
         </NavLink>
       </header>
       <Switch>
-        <Route path="/library" component={BookList} />
-        <Route path="/library/:bookid" component={BookDetail} />
+        <Route exact path="/library" component={BookList} />
+        <Route exact path="/library/:bookId" component={BookDetail} />
         <Route path="/" component={Home} />
       </Switch>
     </Router>
